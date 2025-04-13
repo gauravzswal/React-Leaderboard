@@ -97,7 +97,8 @@ function App() {
           <div className="flex justify-between text-lg font-semibold text-gray-700 border-b pb-3 px-2">
             <span>👤 Name</span>
             <span>🏳️ Country</span>
-            <span>🎯 Score</span>
+            <span className="pr-20">🎯 Score</span>
+            <span></span>
           </div>
 
           {data.map((obj) => (
@@ -107,9 +108,11 @@ function App() {
             >
               <span className="text-gray-800 font-medium">{obj.name}</span>
               <span className="text-gray-600">{obj.country}</span>
-              <span className="text-purple-700 font-bold">{obj.score}</span>
+              <span className="text-purple-700 font-bold pl-12">
+                {obj.score}
+              </span>
 
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center ">
                 <button
                   onClick={() => updateScore(obj.id, "+")}
                   className="text-green-600 font-bold border-2 border-green-300 hover:border-green-500 px-2 py-1 rounded-lg transition hover:bg-green-100"
